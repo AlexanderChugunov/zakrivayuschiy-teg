@@ -13,4 +13,157 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: white; /* Основной цвет фона */
+  background-image: repeating-linear-gradient(90deg, #d3d3d3 0, transparent 2px),
+    repeating-linear-gradient(180deg, #d3d3d3 0, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 960px;
+
+  font-variation-settings: var(--inter_font_weight);
+  font-family: var(--inter_font), sans-serif;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  margin-top: 102px;
+  font-family: var(--accent_font), sans-serif;
+  line-height: 65px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 696px;
+  height: 364px;
+  background-color: white;
+  text-align: center;
+
+}
+.head_logo {
+  font-size: clamp(3.0625rem, 1.9348rem + 4.8632vw, 4.0625rem);
+}
+.head_title {
+  font-size: clamp(0.875rem, 0.2407rem + 2.7356vw, 1.4375rem);
+}
+
+.card {
+  position: relative;
+  border: 1px solid rgb(0, 0, 0);
+  align-items: center;
+  width: 696px;
+}
+.title {
+  padding: 3px 10px;
+  background-color: white;
+  font-family: var(--inter_font);
+  font-size: 18px;
+  font-weight: 700;
+}
+.watermark {
+  font-family: var(--accent_font);
+  font-size: 14px;
+  font-weight: 400;
+  background-color: inherit;
+  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+  position: absolute;
+  right: 25px;
+  top:58px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5; /* Непрозрачность 15% */
+  
+}
+@supports ((text-stroke: 1px ##ffffff) or (-webkit-text-stroke: 1px ##ffffff)) {
+  p {
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+    text-shadow: none;
+  }
+}
+.car-image {
+  width: 696px;
+  height: 696px;
+}
+.content {
+  padding: 25px;
+  font-family: var(--inter_font);
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.floppy{
+  width: 20px;
+  height: 20px;
+}
+.button__text{
+  font-family: var(--accent_font);
+font-size: 14px;
+font-weight: 400;
+
+}
+.display{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*толкнуться от страницы */
+  margin: -50px 0 103px;
+  width: 355px;            
+  height: 55px;
+  border: 1px solid #1a1a1a;
+  gap:8px;
+}
+
+.card__button-container{
+  display: flex;
+    justify-content: right;
+    padding: 0 25px 25px 0;
+}
+.card__icon-button{
+  background-color: inherit;
+  border: none;
+
+}
+
+.like-icon{
+ 
+}
+.card__like-button{
+  
+  width: 130px;
+  height:38px;
+  border: 2px solid #1a1a1a;
+  background-color: inherit;
+
+}
+.card__like-button:focus{
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  transition: box-shadow 0.2s;
+}
+.display:focus{
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  transition: box-shadow 0.2s;
+}
+
+@media (max-width: 375px) {
+  .header {
+    width: 100%;
+  }
+  .car-image {
+    width: 371px;
+    height: 371px;
+  }
+  .card {
+    width: 371px;
+  }
+  .display{
+    margin: -48px 0 100px;
+    width: 306px;
+    flex-direction: column;
+    height: 84px;
+  }
 }
